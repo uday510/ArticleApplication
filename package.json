@@ -1,0 +1,31 @@
+{
+  "name": "article-application",
+  "version": "1.0.0",
+  "description": "NodeJS Article Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uday510/ArticleApplication.git"
+  },
+  "author": "Bandi Uday Teja",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "bugs": {
+    "url": "https://github.com/uday510/ArticleApplication/issues"
+  },
+  "homepage": "https://github.com/uday510/ArticleApplication#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
