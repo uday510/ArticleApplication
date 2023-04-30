@@ -106,7 +106,7 @@ verifyToken = (req, res, next) => {
     if (err) {
       return res.status(401).send({
         statusCode: 401,
-        message: "Token expired or not valid, please create new token",
+        message: "Login expired, please login again",
       });
     }
     // Try to read the userId from the decoded token and store it in the req.userId property
