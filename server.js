@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // for testing purposes
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Welcome to Article Application!");
 });
 
 require("./routes")(app); // Initialize the route/s
