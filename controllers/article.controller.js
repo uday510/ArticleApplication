@@ -6,6 +6,20 @@ const objectConverter = require("../utils/objectConverter");
 exports.createArticle = async (req, res) => {
   const user = await User.findOne({ userId: req.userId });
 
+  // check for userId in params
+  if (!req.params.userId) {
+    return res.status(400).send({
+      statusCode: 400,
+      message: "User Id not provided",
+    });
+  }
+
+  if (req.params.userId != req.userId) {
+    return res.status(400).send({
+      statusCode: 400,
+      message: "User Id provided is incorrect",
+    });
+  }
   // Obj to be stored in DB
   const articleObjToBeStoredInDB = {
     userId: user._id,
@@ -69,5 +83,3 @@ exports.fetchAllArticles = async (req, res) => {
     });
   }
 };
-
-

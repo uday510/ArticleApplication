@@ -19,7 +19,12 @@ app.use(requestTime); // logs request time
 app.use(bodyParser.json()); // used to parse the request and extract the information
 app.use(bodyParser.urlencoded({ extended: true }));
 
-require("./routes")(app) // Initialize the route/s
+// for testing purposes
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+require("./routes")(app); // Initialize the route/s
 
 // Connect to the Database
 mongoose
@@ -29,16 +34,15 @@ mongoose
   })
   .then(() => {
     console.log(`Connecting to MongoDB...`);
-    console.log(`Connection established`)
+    console.log(`Connection established`);
   })
   .catch((err) => {
     console.log(err.message);
   });
 
 //Initialize the express server
-module.exports = app.listen( (serverConfig.HOST, serverConfig.PORT), () => {
-    console.log(`Article Application Running on ${serverConfig.HOST}:${serverConfig.PORT}`);
+module.exports = app.listen((serverConfig.HOST, serverConfig.PORT), () => {
+  console.log(
+    `Article Application Running on ${serverConfig.HOST}:${serverConfig.PORT}`
+  );
 });
-
-
-
