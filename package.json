@@ -2,12 +2,12 @@
   "name": "article-application",
   "version": "1.0.0",
   "description": "NodeJS Article Application",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
