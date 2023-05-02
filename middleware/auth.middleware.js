@@ -28,7 +28,7 @@ validateSignupRequest = async (req, res, next) => {
   if (!req.body.name) {
     return res.status(400).send({
       statusCode: 400,
-      message: "Failed ! user name is not provided",
+      message: "Failed ! name is not provided",
     });
   }
   if (!req.body.userId) {

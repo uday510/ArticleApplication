@@ -33,7 +33,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log(`Connecting to MongoDB...`);
+    console.log(`Connecting to MongoDB Atlas...`);
     console.log(`Connection established`);
   })
   .catch((err) => {
@@ -43,6 +43,6 @@ mongoose
 //Initialize the express server
 module.exports = app.listen((serverConfig.HOST, serverConfig.PORT), () => {
   console.log(
-    `Article Application Running on ${serverConfig.HOST}:${serverConfig.PORT}`
+    `Article Application Running on PORT ${serverConfig.PORT}`
   );
 });
